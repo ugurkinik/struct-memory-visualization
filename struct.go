@@ -4,11 +4,13 @@ import (
 	"reflect"
 )
 
+// The main function
 func DrawMemory(structType reflect.Type, fileName string) {
 	fieldList, memoryMap := detail(structType)
 	draw(fieldList, memoryMap, fileName)
 }
 
+// Create field list and memory map for given struct type
 func detail(structType reflect.Type) (fieldList []string, memoryMap []int) {
 	// Create a map of runes for each byte of the struct
 	fieldList = []string{}
