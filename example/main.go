@@ -6,16 +6,15 @@ import (
 	smv "github.com/kinix/struct-memory-visualization"
 )
 
-type struct1 struct {
+type exampleStruct struct {
 	bool1 bool
+	num1  int64
 	bool2 bool
-	int1  int32
-	bool3 bool
 	bool4 bool
+	num2  int32
 	bool5 bool
-	int2  int64
 }
 
 func main() {
-	smv.DrawMemory(reflect.TypeOf(struct1{}), "image.png")
+	smv.DrawMemory(reflect.TypeOf(exampleStruct{}), "image.png")
 }
